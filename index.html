@@ -1070,7 +1070,7 @@ function renderProdList(){
   const days = pPeriod==='cur' ? ACC.days14 : daysIn(R.a,R.b), split = pPeriod==='cur' ? 7 : 0;
   const item=({p,m})=>{ const c=cpl(m.spend,m.leads);
     return `<button type="button" class="pitem ${p.ended?'ended':''} ${p.id===pSel?'sel':''}" data-id="${p.id}" aria-pressed="${p.id===pSel}">
-      <span class="pi-name">${p.ended?'':'<span class="on" title="ativo"></span>'}${esc(p.label)}${fivTag(p)}</span>
+      <span class="pi-name">${p.ended?'':'<span class="on" title="ativo"></span>'}${esc(p.fiv?p.label.replace(/ · FIV$/,''):p.label)}${fivTag(p)}</span>
       <span class="pi-meta">${p.ended?'<span class="r-tag" style="margin:0 6px 0 0">encerrado</span>':''}<b>${int(m.leads)}</b> leads · ${c?brl(c)+' por lead':'sem leads'}</span>${spark(ser(p.camps,days,3), split)}</button>`; };
   $('#p-list').innerHTML = all.length
     ? act.map(item).join('') + (end.length?`<div class="p-sep mono">ENCERRADOS</div>`+end.map(item).join(''):'')
