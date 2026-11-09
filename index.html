@@ -49,7 +49,7 @@ button,input,select{ font:inherit; color:inherit; }
 .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 .client{ display:inline-flex; flex-direction:column; line-height:1; color:var(--ink); }
 .client b{ font-size:22px; font-weight:700; letter-spacing:-.03em; }
-.client-logo{ height:52px; width:auto; display:block; }
+.client-logo{ height:56px; width:auto; display:block; border-radius:8px; }
 .client small{ font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
 .tabs{ display:flex; gap:4px; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:10px; padding:4px; -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); }
 .tab-btn{ border:0; background:none; color:var(--ink-soft); font-weight:500; font-size:13.5px; padding:7px 16px; border-radius:7px; cursor:pointer; }
@@ -429,7 +429,7 @@ footer{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; fo
 <div class="wrap">
 
   <header class="nav">
-    <span class="client"><img src="assets/logo-azevedo-branco.png" alt="Azevedo Imobiliária" class="client-logo logo-dark"><img src="assets/logo-azevedo.png" alt="Azevedo Imobiliária" class="client-logo logo-light"></span>
+    <span class="client"><img src="assets/logo-azevedo.png" alt="Azevedo Imobiliária" class="client-logo"></span>
     <nav class="tabs" role="tablist">
       <button class="tab-btn active" role="tab" aria-selected="true" data-tab="geral">Visão geral</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="produtos">Empreendimentos</button>
